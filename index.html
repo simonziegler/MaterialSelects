@@ -1,0 +1,189 @@
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MaterialIssues</title>
+    <base href="/">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link href="~/light-square-theme.css" rel="stylesheet" />
+    <script src="https://unpkg.com/material-components-web@8.0.0/dist/material-components-web.js"></script>
+</head>
+
+<body class="mdc-typography mb-custom-scrollbars">
+    <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__cell--span-4">
+            <h2 class="mb-card__title mdc-typography mdc-typography--headline6" style="margin-top: 6rem;">
+                Filled selects and density
+            </h2>
+
+            <h3 class="mb-card__subtitle mdc-typography mdc-typography--subtitle2">
+                These selects misalign selected text when density increases sufficiently to hide the floating label.
+            </h3>
+
+            <p>
+                <div id="select1" class="mdc-select mdc-select--filled demo-width-class">
+                    <div class="mdc-select__anchor"
+                         role="button"
+                         aria-haspopup="listbox"
+                         aria-expanded="false"
+                         aria-labelledby="demo-label demo-selected-text">
+                        <span class="mdc-select__ripple"></span>
+                        <span id="demo-label" class="mdc-floating-label">Pick a Food Group</span>
+                        <span class="mdc-select__selected-text-container">
+                            <span id="demo-selected-text" class="mdc-select__selected-text"></span>
+                        </span>
+                        <span class="mdc-select__dropdown-icon">
+                            <svg
+                                class="mdc-select__dropdown-icon-graphic"
+                                viewBox="7 10 10 5" focusable="false">
+                            <polygon
+                                class="mdc-select__dropdown-icon-inactive"
+                                stroke="none"
+                                fill-rule="evenodd"
+                                points="7 10 12 15 17 10">
+                            </polygon>
+                            <polygon
+                                class="mdc-select__dropdown-icon-active"
+                                stroke="none"
+                                fill-rule="evenodd"
+                                points="7 15 12 10 17 15">
+                            </polygon>
+                            </svg>
+                        </span>
+                        <span class="mdc-line-ripple"></span>
+                    </div>
+                  
+                    <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
+                        <ul class="mdc-list" role="listbox" aria-label="Food picker listbox">
+                            <li class="mdc-list-item mdc-list-item--selected" aria-selected="true" data-value="" role="option">
+                            <span class="mdc-list-item__ripple"></span>
+                            </li>
+                            <li class="mdc-list-item" aria-selected="false" data-value="grains" role="option">
+                            <span class="mdc-list-item__ripple"></span>
+                            <span class="mdc-list-item__text">
+                                Bread, Cereal, Rice, and Pasta
+                            </span>
+                            </li>
+                            <li class="mdc-list-item mdc-list-item--disabled" aria-selected="false" data-value="vegetables" aria-disabled="true" role="option">
+                            <span class="mdc-list-item__ripple"></span>
+                            <span class="mdc-list-item__text">
+                                Vegetables
+                            </span>
+                            </li>
+                            <li class="mdc-list-item" aria-selected="false" data-value="fruit" role="option">
+                            <span class="mdc-list-item__ripple"></span>
+                            <span class="mdc-list-item__text">
+                                Fruit
+                            </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </p>
+
+            <p>
+                <div id="select2" class="mdc-select mdc-select--outlined">
+                    <div class="mdc-select__anchor" aria-labelledby="outlined-select-label">
+                        <span class="mdc-notched-outline">
+                            <span class="mdc-notched-outline__leading"></span>
+                            <span class="mdc-notched-outline__notch">
+                            <span id="outlined-select-label" class="mdc-floating-label">Pick a Food Group</span>
+                            </span>
+                            <span class="mdc-notched-outline__trailing"></span>
+                        </span>
+                        <span class="mdc-select__selected-text-container">
+                            <span id="demo-selected-text" class="mdc-select__selected-text"></span>
+                        </span>
+                        <span class="mdc-select__dropdown-icon">
+                            <svg
+                                class="mdc-select__dropdown-icon-graphic"
+                                viewBox="7 10 10 5" focusable="false">
+                            <polygon
+                                class="mdc-select__dropdown-icon-inactive"
+                                stroke="none"
+                                fill-rule="evenodd"
+                                points="7 10 12 15 17 10">
+                            </polygon>
+                            <polygon
+                                class="mdc-select__dropdown-icon-active"
+                                stroke="none"
+                                fill-rule="evenodd"
+                                points="7 15 12 10 17 15">
+                            </polygon>
+                            </svg>
+                        </span>
+                    </div>
+                  
+                    <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
+                        <ul class="mdc-list" role="listbox" aria-label="Food picker listbox">
+                            <li class="mdc-list-item mdc-list-item--selected" aria-selected="true" data-value="" role="option">
+                            <span class="mdc-list-item__ripple"></span>
+                            </li>
+                            <li class="mdc-list-item" aria-selected="false" data-value="grains" role="option">
+                            <span class="mdc-list-item__ripple"></span>
+                            <span class="mdc-list-item__text">
+                                Bread, Cereal, Rice, and Pasta
+                            </span>
+                            </li>
+                            <li class="mdc-list-item mdc-list-item--disabled" aria-selected="false" data-value="vegetables" aria-disabled="true" role="option">
+                            <span class="mdc-list-item__ripple"></span>
+                            <span class="mdc-list-item__text">
+                                Vegetables
+                            </span>
+                            </li>
+                            <li class="mdc-list-item" aria-selected="false" data-value="fruit" role="option">
+                            <span class="mdc-list-item__ripple"></span>
+                            <span class="mdc-list-item__text">
+                                Fruit
+                            </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </p>
+        </div>
+    </div>
+
+    <!-- Start Single Page Apps for GitHub Pages -->
+    <script type="text/javascript">
+        // Single Page Apps for GitHub Pages
+        // https://github.com/rafrex/spa-github-pages
+        // Copyright (c) 2016 Rafael Pedicini, licensed under the MIT License
+        // ----------------------------------------------------------------------
+        // This script checks to see if a redirect is present in the query string
+        // and converts it back into the correct url and adds it to the
+        // browser's history using window.history.replaceState(...),
+        // which won't cause the browser to attempt to load the new url.
+        // When the single page app is loaded further down in this file,
+        // the correct url will be waiting in the browser's history for
+        // the single page app to route accordingly.
+        (function (l) {
+            if (l.search) {
+                var q = {};
+                l.search.slice(1).split('&').forEach(function (v) {
+                    var a = v.split('=');
+                    q[a[0]] = a.slice(1).join('=').replace(/~and~/g, '&');
+                });
+                if (q.p !== undefined) {
+                    window.history.replaceState(null, null,
+                        l.pathname.slice(0, -1) + (q.p || '') +
+                        (q.q ? ('?' + q.q) : '') +
+                        l.hash
+                    );
+                }
+            }
+        }(window.location))
+
+        mdc.textField.MDCTextField.attachTo(document.querySelector('#field1'));
+        mdc.textField.MDCTextField.attachTo(document.querySelector('#field2'));
+        mdc.textField.MDCTextField.attachTo(document.querySelector('#field3'));
+        mdc.textField.MDCTextField.attachTo(document.querySelector('#field4'));
+        mdc.ripple.MDCRipple.attachTo(document.querySelector('#fab1'));
+        mdc.select.MDCSelect.attachTo(document.querySelector('#select1'));
+        mdc.select.MDCSelect.attachTo(document.querySelector('#select2'));
+    </script>
+    <!-- End Single Page Apps for GitHub Pages -->
+
+    </body>
+</html>
