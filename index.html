@@ -15,7 +15,7 @@
         }
 
         .mdc-card {
-            padding: 0 1rem;
+            padding: 1rem;
             margin-bottom: 2rem;
         }
     </style>
@@ -32,6 +32,7 @@
                 <h3 class="mb-card__subtitle mdc-typography mdc-typography--subtitle2">
                     Outlined selects with square corners show horizontally misaligned floating labels and text. When an icon is added text
                     is correctly aligned, but non-floating labels are not. Filled selects are shown for reference.
+                    See <a href="https://github.com/simonziegler/MaterialSelects">GitHub repo</a>.
                 </h3>
 
                 <p>
@@ -290,7 +291,7 @@
 
                 <h3 class="mb-card__subtitle mdc-typography mdc-typography--subtitle2">
                     These selects have vertically misaligned selected text when density increases sufficiently to hide the floating label. Outlined
-                    selects are shown for reference.
+                    selects are shown for reference. See <a href="https://github.com/simonziegler/MaterialSelects">GitHub repo</a>.
                 </h3>
 
                 <p>
@@ -597,8 +598,85 @@
                         </div>
                     </div>
                 </p>
-                
-                
+            </div>
+        </div>
+
+        <div class="mdc-layout-grid__cell--span-12">
+            <div class="mdc-card mdc-card--outlined">
+                <h2 class="mb-card__title mdc-typography mdc-typography--headline6">
+                    Outlined Text Fields
+                </h2>
+
+                <h3 class="mb-card__subtitle mdc-typography mdc-typography--subtitle2">
+                    Outlined text fields show the same issue with squared corners. Filled text fields shown for reference. See <a href="https://github.com/simonziegler/MaterialSelects">GitHub repo</a>.
+                </h3>
+
+                <p>
+                    <label id="textfield1" class="mdc-text-field mdc-text-field--outlined">
+                        <span class="mdc-notched-outline">
+                            <span class="mdc-notched-outline__leading"></span>
+                            <span class="mdc-notched-outline__notch">
+                                <span class="mdc-floating-label" id="my-label-id">Oulined Text Field</span>
+                            </span>
+                            <span class="mdc-notched-outline__trailing"></span>
+                        </span>
+                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id">
+                    </label>
+                </p>
+
+                <p>
+                    <label id="textfield2" class="mdc-text-field mdc-text-field--outlined mdc-text-field--with-leading-icon">
+                        <span class="mdc-notched-outline">
+                            <span class="mdc-notched-outline__leading"></span>
+                            <span class="mdc-notched-outline__notch">
+                                <span class="mdc-floating-label" id="my-label-id">Leading Icon</span>
+                            </span>
+                            <span class="mdc-notched-outline__trailing"></span>
+                        </span>
+                        <i class="material-icons mdc-text-field__icon mdc-text-field__icon--leading" tabindex="0" role="button">event</i>
+                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id">
+                    </label>
+                </p>
+
+                <p>
+                    <label id="textfield3" class="mdc-text-field mdc-text-field--outlined">
+                        <span class="mdc-notched-outline">
+                            <span class="mdc-notched-outline__leading"></span>
+                            <span class="mdc-notched-outline__notch">
+                                <span class="mdc-floating-label" id="my-label-id">Prefix</span>
+                            </span>
+                            <span class="mdc-notched-outline__trailing"></span>
+                        </span>
+                        <span class="mdc-text-field__affix mdc-text-field__affix--prefix">$</span>
+                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id">
+                    </label>
+                </p>
+
+                <p>
+                    <label id="textfield4" class="mdc-text-field mdc-text-field--filled">
+                        <span class="mdc-text-field__ripple"></span>
+                        <span class="mdc-floating-label" id="my-label-id">Filled Text Field</span>
+                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id">
+                    </label>
+                </p>
+
+                <p>
+                    <label id="textfield5" class="mdc-text-field mdc-text-field--filled mdc-text-field--with-leading-icon">
+                        <span class="mdc-text-field__ripple"></span>
+                        <span class="mdc-floating-label" id="my-label-id">Leading Icon</span>
+                        <i class="material-icons mdc-text-field__icon mdc-text-field__icon--leading" tabindex="0" role="button">event</i>
+                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id">
+                    </label>
+                </p>
+
+                <p>
+                    <label id="textfield6" class="mdc-text-field mdc-text-field--filled">
+                        <span class="mdc-text-field__ripple"></span>
+                        <span class="mdc-floating-label" id="my-label-id">Prefix</span>
+                        <span class="mdc-text-field__affix mdc-text-field__affix--prefix">$</span>
+                        <input type="text" class="mdc-text-field__input" aria-labelledby="my-label-id">
+                    </label>
+                </p>
             </div>
         </div>
     </div>
@@ -642,6 +720,12 @@
         mdc.select.MDCSelect.attachTo(document.querySelector('#select7'));
         mdc.select.MDCSelect.attachTo(document.querySelector('#select8'));
         mdc.select.MDCSelect.attachTo(document.querySelector('#select9'));
+        mdc.textField.MDCTextField.attachTo(document.querySelector('#textfield1'));
+        mdc.textField.MDCTextField.attachTo(document.querySelector('#textfield2'));
+        mdc.textField.MDCTextField.attachTo(document.querySelector('#textfield3'));
+        mdc.textField.MDCTextField.attachTo(document.querySelector('#textfield4'));
+        mdc.textField.MDCTextField.attachTo(document.querySelector('#textfield5'));
+        mdc.textField.MDCTextField.attachTo(document.querySelector('#textfield6'));
     </script>
     <!-- End Single Page Apps for GitHub Pages -->
 
